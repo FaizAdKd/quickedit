@@ -186,7 +186,9 @@
       var $lowestCommonParent = $entityElement.parents().has(fieldElement).first();
       entityElement = $lowestCommonParent.find($entityElement);
     }
+    if (typeof entityElement.get(0) !== 'undefined') {
     var entityInstanceID = entityElement.get(0).getAttribute('data-quickedit-entity-instance-id');
+    }
 
     if (!metadata.has(fieldID)) {
       fieldsMetadataQueue.push({
